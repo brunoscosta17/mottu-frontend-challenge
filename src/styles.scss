@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/styles/variables.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: $secondary;
+}
+
+.content {
+  margin: 0 auto;
+  width: 720px;
+  margin-top: 48px;
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__body {
+    background-color: $primary;
+    min-height: 400px;
+  }
+}
