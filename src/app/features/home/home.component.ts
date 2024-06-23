@@ -30,10 +30,10 @@ export class HomeComponent {
   constructor(private characterService: CharacterService) { }
 
   ngOnInit() {
-    this.getCharacters();
+    this.getAllCharacters();
   }
 
-  getCharacters() {
+  getAllCharacters() {
     this.characterService
       .getCharacters()
       .subscribe({
@@ -48,16 +48,24 @@ export class HomeComponent {
   }
 
   onSearchTextChanged(text: string) {
-    this.filterCharacters(text);
+    this.searchCharacter(text);
   }
 
-  filterCharacters(query: string) {
-    if (query.trim() === '') {
-      this.characters = [...this.allCharacters];
+  searchCharacter(name: string) {
+    if (name.trim() === '') {
+      this.getAllCharacters();
     } else {
-      this.characters = this.allCharacters.filter(character =>
-        character.name.toLowerCase().includes(query.toLowerCase())
-      );
+      this.characterService
+        .searchCharacter(name)
+        .subscribe({
+          next: (characters) => {
+            this.characters = characters.results;
+          },
+          error: (error) => {
+            console.log('Erro:', error);
+            this.characters = [];
+          }
+        });
     }
   }
 
