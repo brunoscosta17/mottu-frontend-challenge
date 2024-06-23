@@ -16,15 +16,10 @@ html, body {
 
 .content {
   margin: 0 auto;
-  // width: 720px;
   &__head {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  &__body {
-    background-color: $primary;
-    min-height: 400px;
   }
 }
 

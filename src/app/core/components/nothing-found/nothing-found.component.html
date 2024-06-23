@@ -1,0 +1,9 @@
+<div class="content">
+  <div class="content__body">
+    <h1>{{ content.title }}</h1>
+    <p>{{ content.description }}</p>
+  </div>
+  <div *ngIf="hasActionButton" class="content__action-button">
+    <button (click)="onClick(propertiesActionButton)">{{ propertiesActionButton.label }}</button>
+  </div>
+</div>

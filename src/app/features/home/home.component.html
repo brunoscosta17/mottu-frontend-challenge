@@ -7,7 +7,9 @@
       <app-input-search (searchTextChanged)="onSearchTextChanged($event)"></app-input-search>
     </div>
   </div>
-  <div class="content__body">
-    .
-  </div>
+  @if (false) {
+
+  } @else {
+    <app-nothing-found [content]="content"></app-nothing-found>
+  }
 </div>
