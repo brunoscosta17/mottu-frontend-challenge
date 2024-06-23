@@ -21,7 +21,7 @@ import { Character } from '../../core/models/character.model';
 export class HomeComponent {
 
   characters: Character[] = [];
-  receivedText: string = '';
+  allCharacters: Character[] = [];
   content: ContentNothingFound = {
     title: 'Nada foi encontrado',
     description: 'Tente realizar uma nova busca.'
@@ -38,8 +38,8 @@ export class HomeComponent {
       .getCharacters()
       .subscribe({
         next: (characters) => {
-          console.log('Personagens:', characters);
           this.characters = characters.results;
+          this.allCharacters = characters.results;
         },
         error: (error) => {
           console.log('Erro:', error);
@@ -48,8 +48,17 @@ export class HomeComponent {
   }
 
   onSearchTextChanged(text: string) {
-    this.receivedText = text;
-    console.log('Texto recebido:', this.receivedText);
+    this.filterCharacters(text);
+  }
+
+  filterCharacters(query: string) {
+    if (query.trim() === '') {
+      this.characters = [...this.allCharacters];
+    } else {
+      this.characters = this.allCharacters.filter(character =>
+        character.name.toLowerCase().includes(query.toLowerCase())
+      );
+    }
   }
 
 }

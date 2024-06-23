@@ -4,9 +4,16 @@
       <img src="../../../assets/images/favorite_title.svg" alt="">
     </div>
   </div>
-  @if (false) {
-
-  } @else {
-    <app-nothing-found [hasActionButton]="true" [propertiesActionButton]="propertiesActionButton" [content]="contentNothingFound"></app-nothing-found>
-  }
+  <ng-container *ngIf="(characters$ | async) as characters">
+    <ng-container *ngIf="characters && characters.length > 0; else noFavorites">
+      <app-character-card [characters]="characters"></app-character-card>
+    </ng-container>
+  </ng-container>
+  <ng-template #noFavorites>
+    <app-nothing-found
+      [hasActionButton]="true"
+      [propertiesActionButton]="propertiesActionButton"
+      [content]="contentNothingFound">
+    </app-nothing-found>
+  </ng-template>
 </div>
