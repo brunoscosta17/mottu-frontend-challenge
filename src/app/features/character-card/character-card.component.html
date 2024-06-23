@@ -1,6 +1,10 @@
 <div class="body-card">
   @for (item of characters; track item.id) {
     <div class="card" >
+      <div class="favorite-icon">
+        <img src="../../../assets/images/heart_icon_black.svg" alt="Favorite">
+        <img src="../../../assets/images/heart_icon_white.svg" alt="Favorite">
+      </div>
       <div class="image">
         <img [src]="item.image" [alt]="item.name">
       </div>

@@ -6,6 +6,7 @@
   gap: 24px;
   height: 298px;
   .card {
+    position: relative;
     flex: 0 0 calc(33.333% - 16px);
     box-sizing: border-box;
     border-radius: 12px;
@@ -16,8 +17,22 @@
     img {
       width: 100%;
     }
-
   }
+
+  .favorite-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .favorite-icon img {
+    width: 100%;
+    height: 100%;
+  }
+
   .infos-text {
     background-color: $primary;
     padding: 0 12px 12px 12px;
