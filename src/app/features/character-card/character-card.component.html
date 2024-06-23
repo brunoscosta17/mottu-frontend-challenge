@@ -1,0 +1,16 @@
+<div class="body-card">
+  @for (item of characters; track item.id) {
+    <div class="card" >
+      <div class="image">
+        <img [src]="item.image" [alt]="item.name">
+      </div>
+      <div class="infos-text">
+        <div class="name">{{ item.name }}</div>
+        <div class="species">
+          <span class="species__label">Espécie:</span>
+          <span class="species__value">{{ item.species }}</span>
+        </div>
+      </div>
+    </div>
+  }
+</div>

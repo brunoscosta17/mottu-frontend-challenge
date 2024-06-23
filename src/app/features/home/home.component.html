@@ -7,8 +7,8 @@
       <app-input-search (searchTextChanged)="onSearchTextChanged($event)"></app-input-search>
     </div>
   </div>
-  @if (false) {
-
+  @if (characters.length > 0) {
+    <app-character-card [characters]="characters"></app-character-card>
   } @else {
     <app-nothing-found [content]="content"></app-nothing-found>
   }

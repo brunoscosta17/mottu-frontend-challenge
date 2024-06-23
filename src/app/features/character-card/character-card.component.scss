@@ -1,0 +1,33 @@
+@import '../../../assets/styles/variables.scss';
+
+.body-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  height: 298px;
+  .card {
+    flex: 0 0 calc(33.333% - 16px);
+    box-sizing: border-box;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .image {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+
+  }
+  .infos-text {
+    background-color: $primary;
+    padding: 0 12px 12px 12px;
+    gap: 4px;
+    .name {
+      color: $fontColorWhite;
+      font-family: 'Creepster';
+    }
+    .species {
+      color: $fontColorSecondary;
+    }
+  }
+}
