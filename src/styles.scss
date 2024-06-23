@@ -16,8 +16,7 @@ html, body {
 
 .content {
   margin: 0 auto;
-  width: 720px;
-  margin-top: 48px;
+  // width: 720px;
   &__head {
     display: flex;
     justify-content: space-between;
@@ -28,3 +27,4 @@ html, body {
     min-height: 400px;
   }
 }
+
