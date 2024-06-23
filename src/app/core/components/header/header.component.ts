@@ -10,6 +10,8 @@ import { RouterModule, Router } from '@angular/router';
 })
 export class HeaderComponent {
 
+  favoriteCount: number = 5;
+
   constructor(public _router: Router) { }
 
 }

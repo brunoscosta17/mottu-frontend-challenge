@@ -45,53 +45,23 @@
       color: $fontColorSecondary;
       width: 154px;
 
+      .badge {
+        background-color: $fontColorSecondary;
+        color: $fontColorPrimary;
+        border-radius: 12px;
+        padding: 1px 6px;
+        font-size: 11px;
+        font-weight: bold;
+        margin-left: 2px;
+      }
+
       &:hover {
-        background-color: lighten($primary, 10%); // Ajusta a cor para um tom mais claro no hover
-        color: darken($fontColorSecondary, 10%); // Ajusta a cor do texto para um tom mais escuro no hover
+        background-color: lighten($primary, 10%);
+        color: darken($fontColorSecondary, 10%);
       }
     }
   }
 
-  // @media (max-width: 740px) {
-  //   .header {
-  //     &__container {
-  //       width: 100%;
-  //     }
-  //     &__nav {
-  //       flex-direction: column;
-  //       width: 100%;
-  //       margin-top: 8px;
-
-  //       .home, .favorites {
-  //         width: 100%;
-  //         justify-content: flex-start;
-  //         padding: 0 16px;
-  //       }
-  //     }
-  //   }
-  // }
-
-  // @media (max-width: 540px) {
-  //   .header {
-  //     &__container {
-  //       flex-direction: column;
-  //       height: 100%;
-  //       width: 100%;
-  //     }
-  //     &__nav {
-  //       flex-direction: column;
-  //       width: 100%;
-  //       margin-top: 8px;
-
-  //       .home, .favorites {
-  //         width: 100%;
-  //         justify-content: flex-start;
-  //         padding: 0 16px;
-  //       }
-  //     }
-  //   }
-
-  // }
 }
 
 @media (max-width: 480px) {

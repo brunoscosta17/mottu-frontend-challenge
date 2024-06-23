@@ -46,3 +46,49 @@ h1, p {
     }
   }
 }
+
+@media (max-width: 720px) {
+  .content {
+    &__body {
+      & h1 {
+        color: $fontColorWhite;
+        font-size: 1.3rem;
+      }
+      & p {
+        color: $fontColorSecondary;
+        font-size: .9rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .content {
+    &__body {
+      & h1 {
+        color: $fontColorWhite;
+        font-size: 1rem;
+      }
+      & p {
+        color: $fontColorSecondary;
+        font-size: .75rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 456px) {
+  .content {
+    &__body {
+      padding: 1rem;
+      & h1 {
+        color: $fontColorWhite;
+        font-size: 1rem;
+      }
+      & p {
+        color: $fontColorSecondary;
+        font-size: .75rem;
+      }
+    }
+  }
+}
