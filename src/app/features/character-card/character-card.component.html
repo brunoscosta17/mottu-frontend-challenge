@@ -3,10 +3,10 @@
     <div class="card" >
       <div class="favorite-icon" (click)="toggleFavorite(item)">
         <ng-container *ngIf="(isFavorite(item) | async); else notFavorite">
-          <img src="../../../assets/images/heart_icon_black.svg" alt="Favorite">
+          <img src="/mottu-frontend-challenge/assets/images/heart_icon_black.svg" alt="Favorite">
         </ng-container>
         <ng-template #notFavorite>
-          <img src="../../../assets/images/heart_icon_white.svg" alt="Favorite">
+          <img src="/mottu-frontend-challenge/assets/images/heart_icon_white.svg" alt="Favorite">
         </ng-template>
       </div>
       <div class="image">
